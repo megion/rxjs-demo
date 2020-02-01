@@ -1,0 +1,38 @@
+{
+  "name": "ts-demo",
+  "version": "1.0.0",
+  "description": "typescript demo",
+  "main": "index.js",
+  "scripts": {
+    "prod": "webpack --progress --config webpack.prod.js",
+    "dev": "webpack --progress --config webpack.dev.js",
+    "start": "webpack-dev-server --progress --colors --config webpack.dev.js",
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megion/rxjs-demo.git"
+  },
+  "author": "Ilya Zadorozhny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megion/rxjs-demo/issues"
+  },
+  "homepage": "https://github.com/megion/rxjs-demo#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^24.9.1",
+    "jest": "^25.1.0",
+    "ts-loader": "^6.2.1",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "rxjs": "^6.5.4"
+  }
+}
