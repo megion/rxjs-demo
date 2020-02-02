@@ -1,5 +1,7 @@
 const webpack = require("webpack")
 const path = require("path")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
   context: path.resolve(__dirname, "./src"),
@@ -24,10 +26,17 @@ module.exports = {
     // the type of the exported library
   },
 
-  //plugins: [
-    //new webpack.HotModuleReplacementPlugin(),
-    //new webpack.WatchIgnorePlugin([/\.js$/, /\.d\.ts$/]),
-  //],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      filename: "module_1.html", // target file -> dist/module_1.html
+      inject: true,
+      chunks: ["module1"],
+      template: "module_1/index.html",
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.WatchIgnorePlugin([/\.js$/, /\.d\.ts$/]),
+  ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },

@@ -16,5 +16,9 @@ module.exports = merge(common, {
   },
   devServer: {
     port: 9000,
+    contentBase: path.join(__dirname, "dist"),
+    index: 'module_1.html',
+    open: true,
+    compress: true,
   },
 })
