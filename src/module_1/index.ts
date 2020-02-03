@@ -1,5 +1,5 @@
-import { sum } from "./func"
-import { handleInput } from "./input"
+import { sum } from "./lesson_1/func"
+import { handleInput } from "./lesson_1/from-event"
 
 function start(): void {
   console.log("start index")

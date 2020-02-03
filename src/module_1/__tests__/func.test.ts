@@ -1,4 +1,4 @@
-import { sum } from "../func"
+import { sum } from "../lesson_1/func"
 
 test("func sum", () => {
   const s: number = sum(1, 2)
